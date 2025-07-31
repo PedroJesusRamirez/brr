@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio de Torrents de Muestra</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #24292e;
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        header h1 a {
+            color: #f0f0f0;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            color: #8b949e;
+            margin: 5px 0 0;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Sección de búsqueda */
+        .search-section {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #search-form input {
+            width: 70%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-size: 1em;
+        }
+
+        #search-form button {
+            padding: 12px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #2ea44f;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        #search-form button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+
+        .warning {
+            color: #ffcc00;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+
+        /* Lista de Torrents */
+        .torrent-list h2 {
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #30363d;
+        }
+
+        th {
+            background-color: #24292e;
+        }
+
+        td:nth-child(3) {
+            color: #2ea44f; /* Verde para seeds */
+        }
+        
+        td:nth-child(4) {
+            color: #e24a4a; /* Rojo para leeches */
+        }
+
+        .download-link {
+            font-weight: bold;
+            background-color: #4a90e2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .download-link:hover {
+            background-color: #357ABD;
+            text-decoration: none;
+        }
+
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="#">RepoTorrents</a></h1>
+        <p>Una plantilla estática alojada en GitHub</p>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Buscar Archivos</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Buscar torrents... (no funcional)" disabled>
+                <button type="submit" disabled>Buscar</button>
+            </form>
+            <p class="warning"><strong>Aviso:</strong> Esta es una página de demostración. La búsqueda y las descargas están desactivadas.</p>
+        </section>
+
+        <section class="torrent-list">
+            <h2>Archivos Populares</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre del Archivo</th>
+                        <th>Tamaño</th>
+                        <th>Seeds</th>
+                        <th>Leechs</th>
+                        <th>Descarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ubuntu 24.04 LTS Desktop (64-bit)</td>
+                        <td>4.7 GB</td>
+                        <td>3450</td>
+                        <td>780</td>
+                        <td><a href="#" class="download-link" onclick="alert('Funcionalidad de descarga desactivada.'); return false;">Magnet</a></td>
+                    </tr>
+                    <tr>
+                        <td>LibreOffice v7.5.3 (Windows x64)</td>
+                        <td>340 MB</td>
+                        <td>1230</td>
+                        <td>210</td>
+                        <td><a href="#" class="download-link" onclick="alert('Funcionalidad de descarga desactivada.'); return false;">Magnet</a></td>
+                    </tr>
+                    <tr>
+                        <td>Blender 3.6 LTS (Linux)</td>
+                        <td>256 MB</td>
+                        <td>2800</td>
+                        <td>450</td>
+                        <td><a href="#" class="download-link" onclick="alert('Funcionalidad de descarga desactivada.'); return false;">Magnet</a></td>
+                    </tr>
+                     <tr>
+                        <td>Documentales de Dominio Público Vol. 1</td>
+                        <td>8.2 GB</td>
+                        <td>950</td>
+                        <td>112</td>
+                        <td><a href="#" class="download-link" onclick="alert('Funcionalidad de descarga desactivada.'); return false;">Magnet</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 - Mi Repositorio de GitHub. Esta es una página de demostración sin fines de lucro.</p>
+        <p><strong>Importante:</strong> Alojar o distribuir material con derechos de autor sin permiso es ilegal y está en contra de los Términos de Servicio de GitHub.</p>
+    </footer>
+
+</body>
+</html>
